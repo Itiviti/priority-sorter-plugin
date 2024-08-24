@@ -54,7 +54,7 @@ public class UserIdCauseStrategy extends AbstractStaticPriorityStrategy {
     public boolean isApplicable(Queue.Item item) {
         List<Cause> causes = item.getCauses();
         for (Cause cause : causes) {
-            if (cause.getClass() == UserIdCause.class) {
+            if (cause instanceof UserIdCause) {
                 return true;
             }
         }

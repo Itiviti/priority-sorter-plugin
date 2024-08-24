@@ -54,7 +54,7 @@ public class CLICauseStrategy extends AbstractStaticPriorityStrategy {
     public boolean isApplicable(Queue.Item item) {
         List<Cause> causes = item.getCauses();
         for (Cause cause : causes) {
-            if (cause.getClass() == CLICause.class) {
+            if (cause instanceof CLICause) {
                 return true;
             }
         }
